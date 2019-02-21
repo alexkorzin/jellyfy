@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JELLYFLY</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<style>
+    body {
+        background: #2bb68c;
+    }
+    .download_link{
+        color: #2bb68c;
+    }
+</style>
+
+<body>
+    <!-- SVG FOR JS !NOT VISIBLE!    begin   -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="-100, 0, 100, 100" xml:space="preserve">
+    <path transform="translate(30) rotate(45 50 50)" id="gamepad" d="M509.273,298.297l-32.658-116.62c-6.306-22.534-21.891-41.531-42.76-52.122c-20.87-10.592-45.406-11.956-67.32-3.739
+            c-16.022,6.013-29.628,16.583-39.338,30.558c0,0-0.046,0.037-0.14,0.037H185.45c-0.085,0-0.13-0.03-0.134-0.03
+            c-9.707-13.981-23.309-24.551-39.341-30.567c-21.915-8.211-46.453-6.85-67.321,3.742c-20.864,10.59-36.448,29.587-42.754,52.119
+            L3.242,298.296c-10.789,38.513,6.053,75.722,40.048,88.478c8.556,3.208,17.548,4.722,26.513,4.722
+            c29.164-0.001,58.001-16.026,70.304-41.855l15.67-32.794c9.656,12.936,25.042,20.962,41.742,20.962
+            c22.775,0,42.735-14.858,49.559-36.094h18.302c6.823,21.236,26.777,36.094,49.548,36.094c16.709,0,32.102-8.035,41.756-20.98
+            l15.708,32.8c7.92,16.626,21.687,29.581,38.764,36.476c17.078,6.896,35.982,7.134,53.232,0.668
+            c17.246-6.47,31.332-19.08,39.663-35.506C512.38,334.845,514.235,316.034,509.273,298.297z" />
+
+    <path id="circl__big" style="fill:#F2F2F2;" d="M432.67,379.116c-135.483,71.68-157.538,126.425-267.815,115.791
+            C32.522,463.399,48.276,346.82,6.135,166.045C-36.401-15.124,149.495-34.029,339.723,75.46
+            C496.867,165.651,567.759,307.436,432.67,379.116z" />
+
+    <path id="crown" d="M504.981,150.787c-6.048-5.163-14.583-6.251-21.736-2.769l-109.444,53.28L271.109,82.896
+			C267.311,78.516,261.798,76,256,76c-5.798,0-11.31,2.516-15.109,6.896L138.199,201.297l-109.444-53.28
+			c-7.153-3.481-15.687-2.394-21.737,2.769c-6.05,5.163-8.466,13.421-6.153,21.031l76,250C79.426,430.242,87.195,436,96,436h320
+			c8.804,0,16.574-5.758,19.134-14.182l76-250C513.448,164.208" />
+
+    <path id="puzzle" d="M471.75,255H433.5V153c0-28.05-22.95-51-51-51h-102V63.75C280.5,28.05,252.45,0,216.75,0S153,28.05,153,63.75V102H51
+            c-28.05,0-51,22.95-51,51v96.9h38.25c38.25,0,68.85,30.6,68.85,68.85S76.5,387.6,38.25,387.6H0v96.9c0,28.05,22.95,51,51,51h96.9
+            v-38.25c0-38.25,30.6-68.85,68.85-68.85s68.85,30.6,68.85,68.85v38.25h96.9c28.05,0,51-22.95,51-51v-102h38.25
+            c35.7,0,63.75-28.05,63.75-63.75S507.45,255,471.75,255z" />
+</svg>
+<!-- SVG FOR JS !NOT VISIBLE!    end   -->
+
+<canvas class="canvas"></canvas>
+
+<div class="hero">
+    <span class="hero_title">JELLYFY <span class="hero_title__pref">.js</span></span>
+</div>
+
+<!-- begin side -->
+<div class="side" data-text="jelly">
+</div>
+<!-- end side -->
+
+<!-- begin nav -->
+<div class="nav">
+    <a href="index.html" class="nav_link">Exaple 1</a>
+    <a href="exaple3.html" class="nav_link">Exaple 3</a>
+</div>
+<!-- end nav -->
+
+
+<!-- begin content -->
+<div class="content">
+    <div class="content_subtitle">Pure JS Canvas Jelly Effect Librariy</div>
+    <div class="content_title download">OPEN ON <a target="blank" href="https://github.com/alexkorzin/jellyfy" class="download_link">GITHUB</a>
+    </div>
+</div>
+<!-- end content -->
+
+<script src="js/jellyfy.js"></script>
+
+<script>
+    // Shapes id and settings
+    let shapes = [{
+        shape: '#gamepad',
+        x: 100,
+        y: 100,
+        scale: 18 + window.innerWidth / 220,
+        dotsCount: 50,
+        speed: 0.4,
+    }, {
+        shape: '#gamepad',
+        x: window.innerWidth / 2 - 300,
+        y: window.innerHeight / 2 + 800,
+        scale: 30 + window.innerWidth / 220,
+        dotsCount: 100,
+        speed: 0.9,
+    }, {
+        shape: '#circl__big',
+        x: window.innerWidth / 2 - 900,
+        y: window.innerHeight / 2,
+        scale: 30 + window.innerWidth / 220,
+        dotsCount: 30,
+        speed: 0.6,
+    }, {
+        shape: '#circl__big',
+        x: window.innerWidth / 2 + 200,
+        y: window.innerHeight / 2 + 700,
+        scale: 40 + window.innerWidth / 220,
+        dotsCount: 30,
+        speed: 0.4,
+    }, {
+        shape: '#puzzle',
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2,
+        scale: 8 + window.innerWidth / 220,
+        dotsCount: 55,
+        speed: 0.4,
+    }, {
+        shape: '#crown',
+        x: window.innerWidth / 2 + 250,
+        y: window.innerHeight / 2 + 200,
+        scale: 13 + window.innerWidth / 220,
+        dotsCount: 30,
+        speed: 0.6,
+    }];
+
+    let jl = new Jellyfy({
+        canvas: '.canvas',
+        canvasHeight: window.innerHeight,
+        canvasWidth: window.innerWidth,
+        shapes: shapes,
+        isFly: true,
+        mouseEffect: true,
+        customRAF: false,
+        colorSettings: {
+            colorDark: "#23ad84",
+            colorLight: "#27c899"  
+        }
+    });
+</script>
+</body>
+
+</html>
